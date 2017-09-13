@@ -1,1 +1,3 @@
-# share-ideas
+# Share Ideas App
+
+In progress...
