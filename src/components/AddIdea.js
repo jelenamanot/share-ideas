@@ -18,7 +18,6 @@ class AddIdea extends React.Component {
   }
 
   render() {
-    console.log(ideaRef);
     return(
     <div className="row text-center wrap-form">
       <div className="col-md-12">

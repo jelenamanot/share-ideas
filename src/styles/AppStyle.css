@@ -7,11 +7,12 @@ body {
 }
 
 /* Typography */
-h1 {
+h1, h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 40px;
 }
+h1 { font-size: 40px; }
+h2 { font-size: 30px; }
 
 button {
   cursor: pointer;

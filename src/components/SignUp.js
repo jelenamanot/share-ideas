@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {firebaseApp} from '../firebase';
+import { Link } from 'react-router-dom';
+import { firebaseApp } from '../firebase';
 import Header from './Header';
 
 import '../styles/SignInUpStyle.css';
