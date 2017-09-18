@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {firebaseApp} from '../firebase';
+import Header from './Header';
 
 class SignIn extends React.Component {
 
@@ -18,18 +19,17 @@ class SignIn extends React.Component {
   signIn() {
     const {email, password} = this.state;
     firebaseApp
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .catch(error => {
-        console.log('error', error);
-        this.setState({error})
-      });
+      .auth().signInWithEmailAndPassword(email, password)
+        .catch(error => {
+          console.log('error', error);
+          this.setState({error})
+        });
   }
 
   render() {
     return (
       <div className="container text-center">
-        <h1>Sign In</h1>
+        <Header/>
         <div className="form-inline row">
           <div className="form-group">
             <input
@@ -43,17 +43,21 @@ class SignIn extends React.Component {
             <input
               className="form-control"
               type="text"
-              style={{
-              marginRight: '5px'
-            }}
+              style={{marginRight: '5px'}}
+              onKeyPress={event => {
+                if (event.key === 'Enter') {
+                  this.signIn()
+                }
+              }}
               placeholder="password"
-              onChange={event => this.setState({password: event.target.value})}/>
+              onChange={event => this.setState({password: event.target.value})}
+            />
             <button className="btn btn-primary" onClick={() => this.signIn()}>
               Sign In
             </button>
           </div>
-          </div>
-          <div className="row">
+        </div>
+        <div className="row">
           <p>{this.state.error.message}</p>
           <p>
             <Link to={'/signup'}>You don't have an account? Sign Up instead</Link>
