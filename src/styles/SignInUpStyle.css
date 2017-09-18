@@ -1,0 +1,15 @@
+.wrap-form {
+  padding: 0 25%;
+}
+.idea-input {
+  margin: 0 0 10px 0;
+}
+
+.idea-btn {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.warning {
+  color: #FF5959;
+}

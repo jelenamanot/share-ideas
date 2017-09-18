@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import {firebaseApp} from '../firebase';
 import Header from './Header';
 
+import '../styles/SignInUpStyle.css';
+
 class SignIn extends React.Component {
 
   constructor(props) {
@@ -18,32 +20,27 @@ class SignIn extends React.Component {
 
   signIn() {
     const {email, password} = this.state;
-    firebaseApp
-      .auth().signInWithEmailAndPassword(email, password)
-        .catch(error => {
-          console.log('error', error);
-          this.setState({error})
-        });
+    firebaseApp.auth().signInWithEmailAndPassword(email, password)
+      .catch(error => {
+        console.log('error', error);
+        this.setState({error})
+      });
   }
 
   render() {
     return (
       <div className="container text-center">
         <Header/>
-        <div className="form-inline row">
-          <div className="form-group">
+        <div className="wrap-form">
+          <div className="col-md-12">
             <input
-              className="form-control"
+              className="form-control idea-input"
               type="text"
-              style={{
-              marginRight: '5px'
-            }}
               placeholder="email"
               onChange={event => this.setState({email: event.target.value})}/>
             <input
-              className="form-control"
+              className="form-control idea-input"
               type="text"
-              style={{marginRight: '5px'}}
               onKeyPress={event => {
                 if (event.key === 'Enter') {
                   this.signIn()
@@ -52,13 +49,13 @@ class SignIn extends React.Component {
               placeholder="password"
               onChange={event => this.setState({password: event.target.value})}
             />
-            <button className="btn btn-primary" onClick={() => this.signIn()}>
+            <button className="btn btn-primary idea-btn" onClick={() => this.signIn()}>
               Sign In
             </button>
           </div>
         </div>
-        <div className="row">
-          <p>{this.state.error.message}</p>
+        <div className="wrap-form">
+          <p className="warning">{this.state.error.message}</p>
           <p>
             <Link to={'/signup'}>You don't have an account? Sign Up instead</Link>
           </p>

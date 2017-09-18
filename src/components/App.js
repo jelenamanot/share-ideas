@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { firebaseApp } from '../firebase';
 
 import Header from './Header';
+import AddIdea from './AddIdea';
 import '../styles/AppStyle.css';
 
 class App extends Component {
@@ -12,10 +13,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App container-fluid text-center">
+      <div className="App container text-center">
         <Header />
+        <AddIdea />
         <p>Components to create:</p>
-        <p>Add an idea</p>
         <p>Idea List</p>
         <p>Completed ideas</p>
         <hr />

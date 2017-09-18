@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import {firebaseApp} from '../firebase';
 import Header from './Header';
 
+import '../styles/SignInUpStyle.css';
+
 class SignUp extends React.Component {
 
   constructor(props) {
@@ -29,20 +31,16 @@ class SignUp extends React.Component {
     return (
       <div className="container text-center">
         <Header/>
-        <div className="form-inline row">
-          <div className="form-group">
+        <div className="wrap-form">
+          <div className="col-md-12">
             <input
-              className="form-control"
+              className="form-control idea-input"
               type="text"
-              style={{
-              marginRight: '5px'
-            }}
               placeholder="email"
               onChange={event => this.setState({email: event.target.value})}/>
             <input
-              className="form-control"
+              className="form-control idea-input"
               type="text"
-              style={{marginRight: '5px'}}
               placeholder="password"
               onKeyPress={event => {
                 if (event.key === 'Enter') {
@@ -51,13 +49,13 @@ class SignUp extends React.Component {
               }}
               onChange={event => this.setState({password: event.target.value})}
             />
-            <button className="btn btn-primary" onClick={() => this.signUp()}>
+            <button className="btn btn-primary idea-btn" onClick={() => this.signUp()}>
               Sign Up
             </button>
           </div>
         </div>
-        <div className="row">
-          <p>{this.state.error.message}</p>
+        <div className="wrap-form">
+          <p className="warning">{this.state.error.message}</p>
           <p>
             <Link to={'/signin'}>Already a user? Then sign in</Link>
           </p>
