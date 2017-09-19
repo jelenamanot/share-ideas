@@ -29,9 +29,4 @@ App will be running on port 3000.
 
 ## Github pages
 
-<<<<<<< HEAD
 Project is also on [gh-pages](https://jelenanesic.github.io/share-ideas).
-=======
-Project is also on [gh-pages](https://jelenanesic.github.io/share-ideas).
-
->>>>>>> 122d818ee1b932eb834b568aea37d0c4ce75e344
