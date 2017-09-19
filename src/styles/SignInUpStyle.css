@@ -13,3 +13,9 @@
 .warning {
   color: #FF5959;
 }
+
+@media only screen and (max-width: 640px) {
+	.wrap-form {
+    padding: 0 5%;
+  }
+}

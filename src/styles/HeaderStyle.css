@@ -41,7 +41,8 @@
 /* 400px */
 @media only screen and (max-width: 400px) {
 	#cloud {
-		margin-left: -8px;
+		margin-left: auto;
+		margin-right: auto;
 		width: 290px; 
 		height: 60px;
 	}
