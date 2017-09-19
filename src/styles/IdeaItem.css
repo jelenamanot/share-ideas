@@ -1,5 +1,7 @@
 .idea-title {
   font-size: 120%;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
 }
 .idea-email {
   font-size: 80%;

@@ -12,7 +12,10 @@ h1, h2 {
   font-weight: 700;
 }
 h1 { font-size: 40px; }
-h2 { font-size: 30px; }
+h2 { 
+  font-size: 30px;
+  margin: 25px 0;
+}
 
 button {
   cursor: pointer;
@@ -24,6 +27,10 @@ a {
 a:hover {
   color: #44f5ed;
   text-decoration: none;
+}
+
+.App {
+  margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 400px) {

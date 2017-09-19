@@ -22,6 +22,7 @@ class AddIdea extends React.Component {
     <div className="row text-center wrap-form">
       <div className="col-md-12">
         <div className="form-group">
+        <p>You are logged in as: {this.props.user.email}</p>
           <input 
             className="form-control idea-input"
             type="text"

@@ -7,7 +7,7 @@ class IdeaItem extends React.Component {
     const { email, title } = this.props.idea;
     return(
       <div className="col-md-12">
-        <p className="idea-title"><strong>{title}</strong> &nbsp; </p>
+        <p className="idea-title">{title}&nbsp;</p>
         <p className="idea-email">submitted by: <em>{email}</em></p>
         <hr/>
       </div>
