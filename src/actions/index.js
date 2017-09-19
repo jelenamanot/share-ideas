@@ -1,4 +1,4 @@
-import { SIGNED_IN, SET_IDEAS } from '../constants';
+import { SIGNED_IN, SET_IDEAS, SET_COMPLETED } from '../constants';
 
 // Action creators
 
@@ -16,6 +16,15 @@ export function setIdeas(ideas) {
   const action = {
     type: SET_IDEAS,
     ideas
+  }
+  return action;
+}
+
+// -> Complete ideas
+export function setCompleted(completeIdeas) {
+  const action = {
+    type: SET_COMPLETED,
+    completeIdeas
   }
   return action;
 }

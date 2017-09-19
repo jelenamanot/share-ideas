@@ -22,11 +22,10 @@ button {
 }
 
 a {
-  color: #cef9ff;
+  color: #7DD690;
 }
 a:hover {
-  color: #44f5ed;
-  text-decoration: none;
+  color: #7DD690;
 }
 
 .App {

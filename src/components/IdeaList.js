@@ -21,8 +21,9 @@ class IdeaList extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="IdeaList">
       <h2>Idea List</h2>
+      <hr/>
       {
         this.props.ideas.map((idea, index) => {
           return(

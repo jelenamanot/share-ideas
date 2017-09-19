@@ -6,3 +6,14 @@
 .idea-email {
   font-size: 80%;
 }
+.IdeaList, .CompleteIdeaList {
+  background-color: #05668D;
+  padding: 5px 0;
+  border-top: 5px solid white;
+}
+.IdeaList, .CompleteIdeaList  {
+  margin-bottom: 50px;
+}
+.CompleteIdeaList {
+  padding-bottom: 20px;
+}

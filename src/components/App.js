@@ -4,6 +4,7 @@ import { firebaseApp } from '../firebase';
 import Header from './Header';
 import AddIdea from './AddIdea';
 import IdeaList from './IdeaList';
+import CompleteIdeaList from './CompleteIdeaList';
 
 import '../styles/AppStyle.css';
 
@@ -19,9 +20,7 @@ class App extends Component {
         <Header />
         <AddIdea />
         <IdeaList />
-        <p>Components to create:</p>
-        <p>Completed ideas</p>
-        <hr />
+        <CompleteIdeaList />
         <button 
           className="btn btn-danger"
           onClick={() => this.signOut()}
