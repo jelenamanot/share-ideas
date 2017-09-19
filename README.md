@@ -27,3 +27,7 @@ password: useruser
 
 App will be running on port 3000.
 
+## Github pages
+
+Project is also on [gh-pages](https://jelenanesic.github.io/share-ideas).
+
