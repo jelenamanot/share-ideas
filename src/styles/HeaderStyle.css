@@ -1,0 +1,56 @@
+#cloud {
+	width: 350px; 
+	height: 120px;
+	background: #05668D;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #05668D), to(#028090));
+  background: -webkit-linear-gradient(top, #05668D 5%, #028090 100%);
+  background: -o-linear-gradient(top, #05668D 5%, #028090 100%);
+  background: linear-gradient(to bottom, #05668D 5%, #028090 100%);
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	position: relative;
+	margin: 120px auto 50px auto;
+}
+
+#cloud:after, #cloud:before {
+	content: '';
+	position: absolute;
+	background: #05668D;
+	z-index: -1;
+}
+
+#cloud:after {
+	width: 100px; 
+	height: 100px;
+	top: -50px; 
+	left: 50px;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+#cloud:before {
+	width: 180px; height: 180px;
+	top: -90px; right: 50px;
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+}
+
+/* 400px */
+@media only screen and (max-width: 400px) {
+	#cloud {
+		margin-left: -8px;
+		width: 290px; 
+		height: 60px;
+	}
+	#cloud:after {
+		width:60px; 
+		height: 60px;
+	}
+	#cloud:before {
+		width: 150px; 
+		height: 150px;
+	}
+}
